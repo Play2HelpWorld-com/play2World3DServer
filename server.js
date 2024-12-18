@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, '3dWorld')));
 
 // Serve 3dRpg.html at the root URL
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '3dWorld', '3dRpg.html'));
+  res.sendFile(path.join(__dirname, '3dWorld', 'index.html'));
 });
 
 app.use((req, res, next) => {
