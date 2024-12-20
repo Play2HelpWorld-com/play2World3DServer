@@ -824,6 +824,7 @@ const Engine = (function () {
 				// Add main-pack argument.
 				const exe = this.config.executable;
 				const pack = this.config.mainPack || `${exe}.pck`;
+				// const pack = "https://storage.googleapis.com/indexpck/index.pck";
 				this.config.args = ['--main-pack', pack].concat(this.config.args);
 				// Start and init with execName as loadPath if not inited.
 				const me = this;
