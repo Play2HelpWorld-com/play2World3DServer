@@ -6,7 +6,6 @@ import { fileURLToPath } from 'url';
 import { PORT, FRONTEND_BASE_URL } from './config/env.js';
 import cors from 'cors';
 import { setHeaders } from './middlewares/headers.js';
-import routes from './routes/indexRoute.js';
 
 const app = express();
 const server = createServer(app);
@@ -38,7 +37,6 @@ app.use(setHeaders);
 // Serve the game folder as static files
 app.use(express.static(path.join(__dirname, '3dWorld')));
 
-// Serve 3dRpg.html at the root URL
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '3dWorld', 'index.html'));
 });
